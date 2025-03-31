@@ -16,14 +16,16 @@ import { fetchMovies } from "@/services/api";
 import MovieCard from "@/components/MovieCard";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useColorScheme } from "nativewind";
 
 const index = () => {
   const router = useRouter();
-  const { data, error, loading, refetch } = useFetch(() =>
+  const { data, error, loading } = useFetch(() =>
     fetchMovies({
       query: "",
     })
   );
+  const { colorScheme } = useColorScheme();
 
   return (
     <SafeAreaView className="relative flex-1 h-full bg-primary dark:bg-white">
@@ -47,14 +49,17 @@ const index = () => {
           </Text>
         </View>
 
-        <View>
+        <View className="flex-1 flex items-center justify-center">
           {loading ? (
-            <View className="h-max flex-1 justify-center items-center">
+            <View className="h-full flex-1 justify-center items-center">
               <ActivityIndicator
                 size="large"
-                color="#ffffff"
+                color={colorScheme === "light" ? "#FFFFFF" : "#030014"}
                 className="self-center"
               />
+              <Text className="text-white dark:text-primary mt-2">
+                Loading...
+              </Text>
             </View>
           ) : error ? (
             <Text className="font-bold text-white text-lg text-center mt-12">
@@ -70,10 +75,12 @@ const index = () => {
                 placeholder="Search for movies..."
                 onPress={() => router.push("/search")}
               />
+
               <View>
                 <Text className="text-lg text-white dark:text-primary font-bold mt-5 mb-3">
                   Latest Movies
                 </Text>
+
                 <FlatList
                   data={data}
                   renderItem={({ item }) => <MovieCard {...item} />}
@@ -85,8 +92,10 @@ const index = () => {
                     paddingRight: 5,
                     marginBottom: 10,
                   }}
-                  className="mt-2 pb-32"
+                  className="mt-2 pb-16"
                   scrollEnabled={false}
+                  showsVerticalScrollIndicator={false}
+                  showsHorizontalScrollIndicator={false}
                 />
               </View>
             </View>

@@ -1,8 +1,8 @@
 import { Stack } from "expo-router";
-import "./globals.css";
 import { useColorScheme } from "nativewind";
 import { StatusBar } from "react-native";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import "./globals.css";
 
 export default function RootLayout() {
   const { colorScheme } = useColorScheme();
@@ -17,7 +17,7 @@ export default function RootLayout() {
       />
 
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="movie/[id]" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>

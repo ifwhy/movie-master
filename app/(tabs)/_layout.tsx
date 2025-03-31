@@ -1,9 +1,8 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
-import Feather from "@expo/vector-icons/Feather";
-import Entypo from "@expo/vector-icons/Entypo";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Bookmark, House, Search } from "lucide-react-native";
 
 type TabIconType = {
   focused: boolean;
@@ -63,8 +62,8 @@ const _layout = () => {
           tabBarIcon: ({ focused }) => (
             <TabIcon
               focused={focused}
-              icon={<Entypo name="home" size={26} color="#A8B5DB" />}
-              iconFocused={<Entypo name="home" size={26} color="#FFFFFF" />}
+              icon={<House size={26} color="#A8B5DB" />}
+              iconFocused={<House size={26} color="#FFFFFF" />}
               title="Home"
             />
           ),
@@ -79,8 +78,8 @@ const _layout = () => {
           tabBarIcon: ({ focused }) => (
             <TabIcon
               focused={focused}
-              icon={<Feather name="search" size={26} color="#A8B5DB" />}
-              iconFocused={<Feather name="search" size={26} color="#FFFFFF" />}
+              icon={<Search size={26} color="#A8B5DB" />}
+              iconFocused={<Search size={26} color="#FFFFFF" />}
               title="Search"
             />
           ),
@@ -95,10 +94,8 @@ const _layout = () => {
           tabBarIcon: ({ focused }) => (
             <TabIcon
               focused={focused}
-              icon={<Feather name="bookmark" size={26} color="#A8B5DB" />}
-              iconFocused={
-                <Feather name="bookmark" size={26} color="#FFFFFF" />
-              }
+              icon={<Bookmark size={26} color="#A8B5DB" />}
+              iconFocused={<Bookmark size={26} color="#FFFFFF" />}
               title="Save"
             />
           ),
