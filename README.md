@@ -37,7 +37,7 @@
 
 ```sh
 # Clone repository
-git clone https://github.com/yourusername/movie-master.git
+git https://github.com/ifwhy/movie-master.git
 cd movie-master
 
 # Install dependencies
