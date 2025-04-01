@@ -5,15 +5,16 @@ import {
   ActivityIndicator,
   ScrollView,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
-import { useLocalSearchParams, useRouter } from "expo-router";
+import { Link, useLocalSearchParams, useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { icons } from "@/constants/icons";
 import { fetchMovieDetails } from "@/services/api";
 import useFetch from "@/services/useFetch";
 import { useColorScheme } from "nativewind";
 import ThemeToggle from "@/components/ThemeToggle";
-import { ThumbsUp } from "lucide-react-native";
+import { ThumbsUp, Undo2Icon } from "lucide-react-native";
 
 interface MovieInfoProps {
   label: string;
@@ -69,8 +70,18 @@ const Details = () => {
               resizeMode="stretch"
             />
           </TouchableOpacity>
-          <View className="dark:bg-slate-300 bg-primary right-7 top-7 w-max h-max absolute z-5 rounded-full">
+
+          <View className="dark:bg-slate-300 bg-primary right-5 top-5 w-max h-max absolute z-5 rounded-full">
             <ThemeToggle />
+          </View>
+
+          <View className="dark:bg-slate-300 bg-primary left-5 top-5 w-max h-max absolute z-5 rounded-full">
+            <Link onPress={() => router.back()} href="/" className="p-2">
+              <Undo2Icon
+                color={colorScheme === "light" ? "#FFFFFF" : "#030014"}
+                size={24}
+              />
+            </Link>
           </View>
         </View>
 
@@ -136,15 +147,16 @@ const Details = () => {
       </ScrollView>
 
       <TouchableOpacity
-        className="absolute bottom-5 left-0 right-0 mx-5 bg-accent rounded-lg py-3.5 flex flex-row items-center justify-center z-50"
+        className="absolute bottom-5 left-0 right-0 mx-5 bg-accent rounded-lg py-3.5 flex flex-row items-center justify-center z-50 peer"
         onPress={router.back}
+        activeOpacity={0.8}
       >
         <Image
           source={icons.arrow}
           className="size-5 mr-1 mt-0.5 rotate-180"
           tintColor={colorScheme === "dark" ? "#fff" : "#030014"}
         />
-        <Text className="dark:text-white text-primary font-semibold text-base">
+        <Text className="dark:text-white text-primary font-semibold text-base peer-hover:text-white peer-hover:dark:text-primary">
           Go Back
         </Text>
       </TouchableOpacity>

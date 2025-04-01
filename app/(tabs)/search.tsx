@@ -36,7 +36,7 @@ const search = () => {
   );
 
   useEffect(() => {
-    // debouncing the search input
+    // debounching the search input
     const debounching = setTimeout(async () => {
       if (querySearch.trim()) {
         await loadMoviesSearched();

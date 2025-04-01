@@ -1,50 +1,85 @@
-# Welcome to your Expo app 👋
+<h1 align="center"> 🎬 Movie Master </h1>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+🚀 **Movie Master** adalah aplikasi **React Native** untuk menemukan dan menjelajahi film terbaru dengan fitur **Dark Mode**, **Light Mode**, dan **Movie Search**.
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Tech Stack
 
-   ```bash
-   npm install
-   ```
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![NativeWind](https://img.shields.io/badge/NativeWind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![NativeCN](https://img.shields.io/badge/NativeCN-4F46E5?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 📖 Table of Contents
 
-In the output, you'll find options to open the app in a
+- [📌 Tech Stack](#-tech-stack)
+- [✨ Features](#-features)
+- [📦 Installation](#-installation)
+- [🚀 Usage](#-usage)
+- [📷 Screenshots](#-screenshots)
+- [👤 Author](#-author)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ✨ Features
 
-## Get a fresh project
+✅ **Latest Movies** – Dapatkan daftar film terbaru yang sedang trending 📅🎥
+✅ **Dark Mode & Light Mode** – Mode tampilan yang nyaman di mata 🌙☀️
+✅ **Search Movie** – Cari film favoritmu dengan mudah 🔍🎬
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
+## 📦 Installation
+
+```sh
+# Clone repository
+git clone https://github.com/yourusername/movie-master.git
+cd movie-master
+
+# Install dependencies
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🚀 Usage
 
-To learn more about developing your project with Expo, look at the following resources:
+```sh
+# Jalankan aplikasi di emulator / device
+npm run start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Pastikan **Android Emulator** atau **Xcode Simulator** sudah siap sebelum menjalankan perintah di atas.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 📷 Screenshots
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<div align="center">
+  <table>
+    <tr>
+      <th align="center">Light Mode ☀️</th>
+      <th align="center">Dark Mode 🌙</th>
+    </tr>
+    <tr>
+      <td><img src="./assets/docs/light-mode.jpeg" alt="Light Mode" width="200"></td>
+      <td><img src="./assets/docs/dark-mode.jpeg" alt="Dark Mode" width="200"></td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 👤 Author
+
+Made with ❤️ by **Ivan Wahyu Nugroho**
+
+---
+
+🎬 **Movie Master** – Your ultimate movie discovery app! 🚀
+
+⚡ **Note:** Project ini masih dalam pengembangan dan akan terus diperbarui dengan fitur-fitur baru di masa mendatang! Stay tuned! 🚀
