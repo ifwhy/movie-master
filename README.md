@@ -28,7 +28,9 @@
 ## ✨ Features
 
 ✅ **Latest Movies** – Dapatkan daftar film terbaru yang sedang trending 📅🎥
+
 ✅ **Dark Mode & Light Mode** – Mode tampilan yang nyaman di mata 🌙☀️
+
 ✅ **Search Movie** – Cari film favoritmu dengan mudah 🔍🎬
 
 ---
